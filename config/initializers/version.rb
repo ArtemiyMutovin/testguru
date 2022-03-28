@@ -1,6 +1,7 @@
-module Testguru
+# frozen_string_literal: true
 
-  VERSION = '0.1.0'.freeze
+module Testguru
+  VERSION = '0.1.0'
 
   def self.version
     VERSION
