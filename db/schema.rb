@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,45 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_328_142_954) do
-  create_table 'answers', force: :cascade do |t|
-    t.string 'title', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'questions_id'
-    t.index ['questions_id'], name: 'index_answers_on_questions_id'
+ActiveRecord::Schema[7.0].define(version: 2022_03_28_142954) do
+  create_table "answers", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "correct", default: "f"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "questions_id"
+    t.index ["questions_id"], name: "index_answers_on_questions_id"
   end
 
-  create_table 'categories', force: :cascade do |t|
-    t.string 'title'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'test_id'
-    t.index ['test_id'], name: 'index_categories_on_test_id'
+  create_table "categories", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "test_id"
+    t.index ["test_id"], name: "index_categories_on_test_id"
   end
 
-  create_table 'questions', force: :cascade do |t|
-    t.string 'title', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer 'tests_id'
-    t.index ['tests_id'], name: 'index_questions_on_tests_id'
+  create_table "questions", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "tests_id"
+    t.index ["tests_id"], name: "index_questions_on_tests_id"
   end
 
-  create_table 'tests', force: :cascade do |t|
-    t.string 'title', null: false
-    t.integer 'level'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "tests", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "level", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'email', null: false
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "users", force: :cascade do |t|
+    t.string "email", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key 'answers', 'questions', column: 'questions_id'
-  add_foreign_key 'categories', 'tests'
-  add_foreign_key 'questions', 'tests', column: 'tests_id'
+  add_foreign_key "answers", "questions", column: "questions_id"
+  add_foreign_key "categories", "tests"
+  add_foreign_key "questions", "tests", column: "tests_id"
 end
