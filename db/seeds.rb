@@ -6,3 +6,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Test.create([{ title: 'Ruby', level: 3 }, { title: 'JS' }])
+Category.create([{ title: 'Web Development' }, { title: 'Game Development' }])
+Question.create([{ title: 'Question1' }, { title: 'Question2' }, { title: 'Question3' }])
+Answer.create([{ title: 'Answer1' }, { title: 'Answer2' }])
+User.create([{ email: 'user1@mail' }, { email: 'user2@mail' }])
