@@ -9,6 +9,6 @@
 User.create([{ email: 'david@mail' }, { email: 'mike@mail' }])
 Category.create([{ title: 'Web Development' }, { title: 'Game Development' }])
 Test.create([{ title: 'Ruby', level: 3, category: Category.last, author: User.last }])
-Question.create([{ title: 'Question1', test: Test.first }])
+Question.create([{ title: 'Question1', test: Test.first }, { title: 'Question2', test: Test.first }])
 Answer.create([{ title: 'Answer1', correct: '1', question: Question.first }])
 
