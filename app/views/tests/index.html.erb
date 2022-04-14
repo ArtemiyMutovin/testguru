@@ -1,0 +1,21 @@
+<h1>TestGuru  Tests</h1>
+
+<a href="main.html">Главная страница</a>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Category</th>
+    <th>Author</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+    <tr>
+      <th><%= link_to test.title, test_path(test) %></th>
+      <th><%= test.level %></th>
+      <th><%= test.category %></th>
+      <th><%= test.author %></th>
+    </tr>
+  <% end %>
+</table>
