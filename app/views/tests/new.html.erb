@@ -1,38 +1,3 @@
 <h1>Create new test</h1>
 
-<%= form_with model: @test, data: {turbo: false}, local: true do |form| %>
-  <% if @test.errors.present? %>
-    <div>
-      <h2>Errors detected:</h2>
-      <h2><%= pluralize(@test.errors.count, 'error') %> detected:</h2>
-
-      <ul>
-        <% @test.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p><br>
-
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level %>
-  </p><br>
-
-  <p>
-    <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
-  </p><br>
-
-  <p>
-    <%= form.label :author_id %><br>
-    <%= form.collection_select :author_id, User.all, :id, :email, prompt: true %>
-  </p><br>
-
-  <p><%= form.submit %></p>
-<% end %>
+<%= render 'form' %>
