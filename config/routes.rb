@@ -3,9 +3,9 @@
 Rails.application.routes.draw do
   root to: 'tests#index'
 
-  resources :tests, only: %i[index show new create edit update] do
-    resources :questions, only: %i[index new]
+  resources :tests do
+    resources :questions, only: %i[index new create]
   end
 
-  resources :questions, only: :show
+  resources :questions, only: %i[show edit update]
 end

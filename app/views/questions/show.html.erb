@@ -1,0 +1,12 @@
+<h1><p>
+  <strong>Title:</strong>
+  <%= @question.title %>
+</p></h1>
+
+<h3><p>
+  <strong>Test:</strong>
+  <%= @question.test.title %>
+</p></h3>
+
+<h2><%= link_to 'Изменить вопрос', edit_question_path%></h2>
+<h2><%= link_to 'Назад к тестам', tests_path %></h2>

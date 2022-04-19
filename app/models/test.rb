@@ -14,4 +14,8 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4).order(test_id: :desc) }
   scope :hard, -> { where(level: 5..20).order(test_id: :desc) }
   scope :list, ->(level) { where(level: level).order(test_id: :desc) }
+
+  def self.find!(i)
+    # code here
+  end
 end

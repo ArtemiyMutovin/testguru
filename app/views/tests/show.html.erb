@@ -13,3 +13,11 @@
   <strong>Questions:</strong>
   <%= @test.questions %>
 </p></h3>
+
+<h3><p>
+  <strong>Questions Count:</strong>
+  <%= @test.questions.count %>
+</p></h3>
+
+<h2><%= link_to 'Изменить тест', edit_test_path(@test) %></h2>
+<h2><%= link_to 'Назад к тестам', tests_path %></h2>
