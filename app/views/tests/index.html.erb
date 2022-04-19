@@ -1,0 +1,33 @@
+<h1>TestGuru  Tests</h1>
+
+<h2><a href="main.html">Главная страница</a></h2>
+
+<h2><%= link_to 'Создать новый тест', new_test_path %></h2>
+
+<h2><table style = "height:1000px">
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Category</th>
+    <th>Author</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+    <tr>
+      <th><%= upcase_title(test) %></th>
+      <th><%= test.level %></th>
+      <th><%= test.category %></th>
+      <th><%= test.author %></th>
+      <th><%= link_to 'Просмотр', test_path(test) %></th>
+      <th><%= link_to 'Изменить', edit_test_path(test) %></th>
+      <th><%= link_to 'Удалить', test_path(test),
+                      data: {"turbo-method": :delete},
+                      class: "btn btn-danger ml-3" %></th>
+      <th><%= link_to 'Создать новый вопрос', new_test_question_path(test) %></th>
+    </tr>
+  <% end %>
+</table></h2>
+
+<%= render 'shared/footer' %>
+
