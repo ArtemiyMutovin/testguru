@@ -5,7 +5,7 @@ module ApplicationHelper
     resource.title.upcase
   end
 
-  def application_footer
+  def date
     @current_year = Time.now.year
   end
 
