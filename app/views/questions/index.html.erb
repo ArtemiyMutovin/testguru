@@ -1,5 +1,12 @@
-<div>
+<h1>Questions list</h1>
+
+<h2><table>
   <% @questions.each do |question| %>
-    <%= upcase_title(question) %>
+    <tr>
+      <th><%= link_to upcase_title(question), question_path(question)%></th>
+    </tr>
   <% end %>
-</div>
+</table></h2>
+
+  <h3><%= link_to 'Назад', tests_path%></h3>
+
