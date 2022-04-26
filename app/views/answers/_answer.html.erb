@@ -1,0 +1,8 @@
+<li><h2>
+  <%= answer.title %><br>
+  <%= link_to 'Просмотр', answer_path(answer) %>
+  <%= link_to 'Изменить', edit_answer_path(answer) %>
+  <%= link_to 'Удалить', answer_path(answer),
+                  data: {"turbo-method": :delete},
+                  class: "btn btn-danger ml-3" %>
+</h2></li>
