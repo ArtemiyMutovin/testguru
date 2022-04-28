@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :tests do
     resources :questions, only: %i[index new create]
 
+    member do
+      post :start
+    end
   end
 
   resources :questions, only: %i[show edit update] do
@@ -14,4 +17,11 @@ Rails.application.routes.draw do
   end
 
   resources :answers
+
+  resources :test_passages, only: %i[show update] do
+    member do
+      get :result
+    end
+  end
+
 end
