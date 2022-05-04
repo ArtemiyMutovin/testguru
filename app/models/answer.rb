@@ -2,5 +2,5 @@
 class Answer < ApplicationRecord
   belongs_to :question
 
-  scope :correct, ->(correct) { where(correct: correct).order(question_id: :desc) }
+  scope :correct, -> { where(correct: true) }
 end

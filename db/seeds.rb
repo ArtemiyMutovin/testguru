@@ -13,4 +13,6 @@ Question.create([{ title: 'Question1', test: Test.first }, { title: 'Question2',
 Answer.create([{ title: 'Answer1', correct: true, question: Question.first },
                { title: 'Answer2', correct: false, question: Question.first },
                { title: 'Answer3', correct: false, question: Question.first },
-               { title: 'Answer4', correct: false, question: Question.first }])
+               { title: 'Answer1', correct: false, question: Question.second },
+               { title: 'Answer2', correct: false, question: Question.second },
+               { title: 'Answer3', correct: true, question: Question.second }])

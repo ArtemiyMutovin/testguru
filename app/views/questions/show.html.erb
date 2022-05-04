@@ -9,11 +9,11 @@
 </p></h1>
 
 <h2>Answers</h2>
-<h2><%= link_to 'Новый ответ', new_question_answer_path(@question)%></h2>
+<h2><%= link_to 'New answer', new_question_answer_path(@question)%></h2>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<h2><%= link_to 'Изменить вопрос', edit_question_path%></h2>
-<h2><%= link_to 'Назад к тестам', tests_path %></h2>
+<h2><%= link_to 'Edit question', edit_question_path%></h2>
+<h2><%= link_to 'Back to tests', tests_path %></h2>

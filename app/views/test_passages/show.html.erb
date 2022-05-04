@@ -1,1 +1,22 @@
-<h1>Pass the test</h1>
+<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+
+<h2><p>
+  <strong>Questions Count:</strong>
+  <%= @test_passage.test.questions.count %>
+</p></h2>
+
+<h2>
+  <%= @test_passage.current_question_id %>)<%= @test_passage.current_question.title %>
+</h2>
+
+<%= form_with url: test_passage_path(@test_passage),data: {turbo: false}, local: true, method: :put do |form|%>
+  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :title,
+                                  include_hidden: false do |b| %>
+    <h2>
+      <%= b.check_box id: "answer_ids_#{b.object_id}" %>
+      <%= b.label %>
+    </h2>
+  <% end %>
+
+  <h2><%= form.submit 'Next' %></h2>
+<% end %>
