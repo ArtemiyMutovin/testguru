@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
   root to: 'tests#index'
 
   resources :tests do
@@ -23,5 +22,4 @@ Rails.application.routes.draw do
       get :result
     end
   end
-
 end

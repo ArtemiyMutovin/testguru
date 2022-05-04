@@ -6,7 +6,7 @@ module ApplicationHelper
   end
 
   def date
-    @current_year = Time.now.year
+    Time.zone.now.year
   end
 
   def link(author, repo)
