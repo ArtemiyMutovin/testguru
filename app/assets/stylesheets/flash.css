@@ -6,5 +6,9 @@
 }
 
 .flash.alert {
-    border-color: #B00100;
+    border-color: red;
+}
+
+.flash.success {
+    border-color: greenyellow;
 }
