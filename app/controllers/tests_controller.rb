@@ -1,4 +1,6 @@
 class TestsController < ApplicationController
+
+  before_action :authenticate_user!
   before_action :find_test, only: %i[show edit update destroy]
   before_action :set_test, only: %i[show edit update destroy start]
   before_action :set_user, only: %i[start]

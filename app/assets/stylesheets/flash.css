@@ -1,0 +1,10 @@
+.flash {
+    border: 5px solid;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 150%;
+}
+
+.flash.alert {
+    border-color: #B00100;
+}
