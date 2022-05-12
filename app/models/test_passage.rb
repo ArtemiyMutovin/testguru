@@ -46,6 +46,6 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.questions.find_by(id: current_question.id)
+    test.questions.order(:id).find_by('id > ?', current_question.id)
   end
 end
