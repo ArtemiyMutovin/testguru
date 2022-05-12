@@ -1,0 +1,7 @@
+.tests {
+    border: 10px solid blue;
+    height:1000px;
+    border-radius: 25px;
+    background-color: lightsteelblue;
+    color: darkblue;
+}
