@@ -1,0 +1,32 @@
+.footer{
+    background-color:yellow;
+    color: darkblue;
+    height:80px
+}
+.date{
+    color: darkblue;
+    text-align: center
+}
+
+.nav {
+    text-align: right;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 150%;
+    border: 5px solid blue;
+}
+
+.flash {
+    border: 5px solid;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 150%;
+}
+
+.flash.alert {
+    border-color: red;
+}
+
+.flash.success {
+    border-color: greenyellow;
+}

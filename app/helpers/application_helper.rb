@@ -12,4 +12,8 @@ module ApplicationHelper
   def link(author, repo)
     "https://github.com/#{author}/#{repo}"
   end
+
+  def flash_message(type)
+    tag.p(flash[type], class: "flash #{type}")
+  end
 end

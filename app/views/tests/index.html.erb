@@ -1,10 +1,8 @@
-<h1>TestGuru  Tests</h1>
-
-<h2><a href="main.html">Main page</a></h2>
+<h1><a href="main.html">Test Guru</a> Tests</h1>
 
 <h2><%= link_to 'Create new test', new_test_path %></h2>
 
-<h2><table style = "height:1000px">
+<h2><table class="tests">
   <tr>
     <th>Title</th>
     <th>Level</th>
@@ -29,6 +27,3 @@
     </tr>
   <% end %>
 </table></h2>
-
-<%= render 'shared/footer' %>
-

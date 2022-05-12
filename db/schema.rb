@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_04_123552) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_12_151003) do
   create_table "answers", force: :cascade do |t|
     t.string "title", null: false
     t.boolean "correct", default: false
@@ -62,6 +62,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_04_123552) do
     t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "answers", "questions"
