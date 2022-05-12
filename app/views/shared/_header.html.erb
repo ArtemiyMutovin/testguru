@@ -1,0 +1,11 @@
+<header class="nav">
+  <% if logged_in? %>
+    <p>Welcome, <b><%= current_user.email %></b> Guru
+      <%= link_to 'Logout', logout_path,
+                  data: {"turbo-method": :delete},
+                  class: "btn btn-danger ml-3" %></p>
+  <% else %>
+    <%= link_to 'Sign up', signup_path%>
+    <%= link_to 'Log in', login_path%>
+  <% end %>
+</header>
