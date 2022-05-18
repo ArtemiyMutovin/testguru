@@ -1,0 +1,27 @@
+<h1>Test Guru</a> Tests</h1>
+
+<h2><%= link_to 'Create new test', new_admin_test_path %></h2>
+
+<h2><table class="tests">
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Category</th>
+    <th>Author</th>
+    <th colspan="4">Actions</th>
+  </tr>
+
+  <% @tests.each do |test| %>
+    <tr>
+      <th><%= upcase_title(test) %></th>
+      <th><%= test.level %></th>
+      <th><%= test.category %></th>
+      <th><%= test.author %></th>
+      <th><%= link_to 'Show', admin_test_path(test) %></th>
+      <th><%= link_to 'Edit', edit_admin_test_path(test) %></th>
+      <th><%= link_to 'Delete', admin_test_path(test),
+                      data: {"turbo-method": :delete},
+                      class: "btn btn-danger ml-3" %></th>
+    </tr>
+  <% end %>
+</table></h2>

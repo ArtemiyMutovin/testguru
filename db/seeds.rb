@@ -8,7 +8,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 User.create([{ email: 'david@mail' }, { email: 'mike@mail' }, { email: 'artem@mail' }])
 Category.create([{ title: 'Web Development' }, { title: 'Game Development' }])
-Test.create(title: 'Ruby', level: 3, category: Category.last, author: User.last)
+Test.create(title: 'Ruby', level: 3, category: Category.last, author: Admin.last)
 Question.create([{ title: 'Question1', test: Test.first }, { title: 'Question2', test: Test.first }])
 Answer.create([{ title: 'Answer1', correct: true, question: Question.first },
                { title: 'Answer2', correct: false, question: Question.first },

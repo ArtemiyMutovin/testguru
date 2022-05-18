@@ -1,0 +1,10 @@
+<%= form_with model: [:admin, @test, @question], data: {turbo: false}, local: true do |form| %>
+<%= render 'shared/errors', resource: @question %>
+
+<h2><p>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+</p></h2><br>
+
+<h3><p><%= form.submit %></p></h3>
+<% end %>

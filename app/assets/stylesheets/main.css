@@ -23,6 +23,10 @@
     font-size: 150%;
 }
 
+.flash.notice {
+    border-color: yellow;
+}
+
 .flash.alert {
     border-color: red;
 }

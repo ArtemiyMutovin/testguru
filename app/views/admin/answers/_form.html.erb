@@ -1,0 +1,15 @@
+<%= form_with model: [:admin, @question, @answer], data: {turbo: false}, local: true do |form| %>
+  <%= render 'shared/errors', resource: @answer %>
+
+  <h2><p>
+    <%= form.label :title %><br>
+    <%= form.text_area :title, id: :answer_title, rows: 6, cols: 50 %>
+  </p></h2><br>
+
+  <h2><p>
+    <%= form.label :correct %><br>
+    <%= form.check_box :correct, id: :answer_correct %>
+  </p></h2><br>
+
+  <h3><p><%= form.submit %></p></h3>
+<% end %>
