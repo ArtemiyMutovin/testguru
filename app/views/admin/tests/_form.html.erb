@@ -17,10 +17,5 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p></h2><br>
 
-  <h2><p>
-    <%= form.label :author_id %><br>
-    <%= form.collection_select :author_id, User.all, :id, :email, prompt: true %>
-  </p></h2><br>
-
   <h3><p><%= form.submit %></p></h3>
 <% end %>
