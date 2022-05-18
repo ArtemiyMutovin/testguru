@@ -1,8 +1,0 @@
-<li><h2>
-  <%= answer.title %><br>
-  <%= link_to 'Show', answer_path(answer) %>
-  <%= link_to 'Edit', edit_answer_path(answer) %>
-  <%= link_to 'Delete', answer_path(answer),
-                  data: {"turbo-method": :delete},
-                  class: "btn btn-danger ml-3" %>
-</h2></li>

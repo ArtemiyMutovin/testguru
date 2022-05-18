@@ -1,5 +1,5 @@
 
-<%= form_with model: @test, data: {turbo: false}, local: true do |form| %>
+<%= form_with model: [:admin, @test], data: {turbo: false}, local: true do |form| %>
   <%= render 'shared/errors', resource: @test  %>
 
   <h2><p>

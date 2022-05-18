@@ -1,0 +1,18 @@
+
+<h1><p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p></h1>
+
+<h3><p>
+  <strong>Level:</strong>
+  <%= @test.level %>
+</p></h3>
+
+<h3><p>
+  <strong><%= link_to 'Questions', admin_test_questions_path(@test)%></strong>
+</p></h3>
+
+<h2><%= link_to 'Create new question', new_admin_test_question_path(@test) %></h2>
+<h2><%= link_to 'Edit test', edit_admin_test_path(@test) %></h2>
+<h2><%= link_to 'Back to tests', admin_tests_path %></h2>

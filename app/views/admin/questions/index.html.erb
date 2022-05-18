@@ -1,0 +1,12 @@
+<h1>Questions list</h1>
+
+<h2><table>
+  <% @questions.each do |question| %>
+    <tr>
+      <th><%= link_to upcase_title(question), admin_question_path(question)%></th>
+    </tr>
+  <% end %>
+</table></h2>
+
+  <h3><%= link_to 'Back', admin_test_path(@test)%></h3>
+
