@@ -31,3 +31,140 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+      test_passage:
+        show: "Save"
+      question:
+        create: "Create question"
+        update: "Update question"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+      question:
+        title: "Title"
+      answer:
+        title: "Title"
+        correct: "Correct"
+
+  controllers:
+    admin:
+      base_controller:
+        alert: "You are not authorized to view this page."
+
+  shared:
+    header:
+      welcome: "Welcome,%{first_name} %{last_name}"
+      footer: "Logout"
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tricky tests"
+    body:
+      title: "Title"
+      level: "Level"
+      category: "Category"
+      author: "Author"
+
+  test_passages:
+    show:
+      header: "Passing the %{title} test"
+      body:
+        count: "Questions count:"
+    result:
+      header: "Test %{title} successfully completed!"
+      footer: "Back to tests"
+      score: "Result %{score}"
+      success: "Test completed, your score %{progress}%"
+      failure: "Test failed,your score %{progress}%"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created"
+      index:
+        header: "Tricky tests"
+        create: "Create new test"
+      body:
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        author: "Author"
+        actions: "Actions"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        header: "Creating new test"
+        footer: "Back to tests"
+      show:
+        title: "Title:"
+        level: "Level:"
+        questions: "Questions list"
+        create: "Create new question"
+        edit: "Edit question"
+        footer: "Back to tests"
+      edit:
+        header: "Edit %{title} test"
+        footer: "Back"
+
+    questions:
+      create:
+        success: "Question was successfully created"
+      index:
+        header: "Questions list"
+        footer: "Back"
+      new:
+        header: "Creating %{title} new question"
+        footer: "Back"
+      edit:
+        header: "Edit %{title} test question"
+        footer: "Back"
+      show:
+        header: "Title:"
+        title: "Test:"
+        answers: "Answers"
+        link: "New answer"
+        edit: "Edit question"
+        footer: "Back"
+
+    answers:
+      answer:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        header: "Creating new answer"
+        footer: "Back"
+      show:
+        header: "Answer information"
+        title: "Answer:"
+        correct: "Correct:"
+        footer: "Back"
+      edit:
+        header: "Editing answer"
+        footer: "Back"
+
+    nav:
+      panel: "TestGuru admin panel"
+      welcome: "Welcome,%{first_name} %{last_name}"
+      footer: "Logout"
+
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+

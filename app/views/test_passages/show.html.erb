@@ -1,7 +1,7 @@
-<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h1><%= t('test_passages.show.header', title: @test_passage.test.title ) %></h1>
 
 <h2><p>
-  <strong>Questions Count:</strong>
+  <strong><%= t('test_passages.show.body.count') %></strong>
   <%= @test_passage.test.questions.count %>
 </p></h2>
 
@@ -18,5 +18,5 @@
     </h2>
   <% end %>
 
-  <h2><%= form.submit 'Next' %></h2>
+  <h2><%= form.submit %></h2>
 <% end %>

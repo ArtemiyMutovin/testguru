@@ -1,0 +1,142 @@
+ru:
+  hello: "Привет мир"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+      test_passage:
+        show: "Сохранить"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Обновить ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      question:
+        title: "Название"
+      answer:
+        title: "Ответ"
+        correct: "Верный"
+
+  controllers:
+    admin:
+      base_controller:
+        alert: "Вы не авторизованы для просмотра этой страницы."
+
+  shared:
+    header:
+      welcome: "Добро пожаловать,%{first_name} %{last_name}"
+      footer: "Выйти"
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      body:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        questions: "Кол-во вопросов"
+        actions: "Действия"
+        start: "Начать"
+
+  test_passages:
+    show:
+      header: "Прохождение теста по %{title}"
+      body:
+        count: "Кол-во вопросов:"
+    result:
+      header: "Тест %{title} успешно завершен!"
+      footer: "Назад к тестам"
+      score: "Результат %{score}"
+      success: "Вы выполнили тест на %{progress}%"
+      failure: "Тест провален, ваш счет %{progress}%"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан"
+      index:
+        header: "Доступные тесты"
+        create: "Создать новый тест"
+      body:
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        actions: "Действия"
+        show: "Смотреть"
+        edit: "Изменить"
+        delete: "Удалить"
+      new:
+        header: "Создание нового теста"
+        footer: "Назад к тестам"
+      show:
+        title: "Название:"
+        level: "Уровень:"
+        questions: "Список вопросов"
+        create: "Создать новый вопрос"
+        edit: "Изменить тест"
+        footer: "Назад к тестам"
+      edit:
+        header: "Редактирование теста по %{title}"
+        footer: "Назад"
+
+    questions:
+      create:
+        success: "Вопрос был успешно создан"
+      index:
+        header: "Список вопросов"
+        footer: "Назад"
+      new:
+        header: "Создание нового вопроса для теста по %{title}"
+        footer: "Назад"
+      edit:
+        header: "Редактирование вопроса по тесту %{title}"
+        footer: "Назад"
+      show:
+        header: "Название:"
+        title: "Тест:"
+        answers: "Ответы"
+        link: "Новый ответ"
+        edit: "Изменить вопрос"
+        footer: "Назад"
+
+    answers:
+      answer:
+        show: "Смотреть"
+        edit: "Изменить"
+        delete: "Удалить"
+      new:
+        header: "Создание нового ответа"
+        footer: "Назад"
+      show:
+        header: "Информация об ответе"
+        title: "Ответ:"
+        correct: "Верность ответа:"
+        footer: "Назад"
+      edit:
+        header: "Редактирование ответа"
+        footer: "Назад"
+
+    nav:
+      panel: "Панель администратора TestGuru"
+      welcome: "Добро пожаловать,%{first_name} %{last_name}"
+      footer: "Выйти"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно прошли тест на TestGuru!"
+

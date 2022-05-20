@@ -1,12 +1,12 @@
-<h1>Test Guru</a> Tests</h1>
+<h1><%= t('tests.index.header') %></h1>
 
 <h2><table class="tests">
   <tr>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Category</th>
-    <th>Questions</th>
-    <th>Actions</th>
+    <th><%= t('tests.index.body.title') %></th>
+    <th><%= t('tests.index.body.level') %></th>
+    <th><%= t('tests.index.body.category') %></th>
+    <th><%= t('tests.index.body.questions') %></th>
+    <th><%= t('tests.index.body.actions') %></th>
   </tr>
 
   <% @tests.each do |test| %>
@@ -15,7 +15,7 @@
       <th><%= test.level %></th>
       <th><%= test.category %></th>
       <th><%= test.questions.count %></th>
-      <th><%= button_to 'Start', start_test_path(test) %></th>
+      <th><%= button_to t('tests.index.body.start'), start_test_path(test) %></th>
     </tr>
   <% end %>
 </table></h2>

@@ -1,19 +1,19 @@
 <h1><p>
-  <strong>Title:</strong>
+  <strong><%= t('admin.questions.show.header') %></strong>
   <%= @question.title %>
 </p></h1>
 
 <h1><p>
-  <strong>Test:</strong>
+  <strong><%= t('admin.questions.show.title') %></strong>
   <%= @question.test.title %>
 </p></h1>
 
-<h2>Answers</h2>
-<h2><%= link_to 'New answer', new_admin_question_answer_path(@question)%></h2>
+<h2><%= t('admin.questions.show.answers') %></h2>
+<h2><%= link_to t('admin.questions.show.link'), new_admin_question_answer_path(@question)%></h2>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-<h2><%= link_to 'Edit question', edit_admin_question_path%></h2>
-<h2><%= link_to 'Back', admin_tests_path %></h2>
+<h2><%= link_to t('admin.questions.show.edit'), edit_admin_question_path%></h2>
+<h2><%= link_to t('admin.questions.show.footer'), admin_test_questions_path(@question.test) %></h2>
