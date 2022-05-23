@@ -2,16 +2,17 @@ ru:
   activerecord:
     models:
       test: "Тест"
-      question: "Вопрос"
 
     attributes:
       test:
         title: "Название"
-      question:
-        title: "Название"
+        category: "Категория"
+        level: "Уровень"
 
     errors:
       messages:
         blank: "не может быть пустым"
+        required: "не может отсутствовать"
+
 
 

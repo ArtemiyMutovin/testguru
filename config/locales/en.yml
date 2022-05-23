@@ -33,6 +33,8 @@ en:
   hello: "Hello world"
 
   helpers:
+    select:
+      prompt: "Select category"
     submit:
       test:
         create: "Create test"

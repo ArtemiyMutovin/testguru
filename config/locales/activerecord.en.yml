@@ -2,14 +2,14 @@ en:
   activerecord:
     models:
       test: "Test"
-      question: "Question"
 
     attributes:
       test:
         title: "Title"
-      question:
-        title: "Title"
+        category: "Category"
+        level: "Level"
 
     errors:
       messages:
         blank: "can't be blank"
+        required: "must exist"
