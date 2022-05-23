@@ -1,4 +1,4 @@
-<h2>Enter the Guru Gates</h2>
+<h2><%= t('devise.sessions.new.header') %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <h1 class="field">
@@ -19,7 +19,7 @@
   <% end %>
 
   <h1 class="actions">
-    <%= f.submit "Enter" %>
+    <%= f.submit t('helpers.submit.session.enter') %>
   </h1>
 <% end %>
 

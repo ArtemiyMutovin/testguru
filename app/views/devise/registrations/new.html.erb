@@ -1,4 +1,4 @@
-<h2>Become a Guru</h2>
+<h2><%= t('devise.registrations.new.header') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -32,7 +32,7 @@
   </h1>
 
   <h1 class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit t('helpers.submit.user.signup') %>
   </h1>
 <% end %>
 

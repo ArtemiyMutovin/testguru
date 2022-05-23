@@ -17,7 +17,7 @@ class TestPassage < ApplicationRecord
   end
 
   def successful?
-    progress >= 85
+    progress >= 75
   end
 
   def failed?

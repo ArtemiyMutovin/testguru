@@ -1,8 +1,8 @@
-<h1>Editing answer</h1>
+<h1><%= t('admin.answers.edit.header') %></h1>
 
-<p>
+<h2>
   <%= @answer.question.title %>
-</p>
+</h2>
 
 <%= render 'form' %>
-<%= link_to 'Back', admin_question_path(@answer.question)%>
+<h2><%= link_to t('admin.answers.edit.footer'), admin_question_path(@answer.question)%></h2>

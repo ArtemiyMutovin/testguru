@@ -1,17 +1,17 @@
-<h1>Answer info</h1>
+<h1><%= t('admin.answers.show.header') %></h1>
 
 <h2>
   <%= @answer.question.title %>
 </h2>
 
 <h2>
-  <b>Answer:</b>
+  <b><%= t('admin.answers.show.title') %></b>
   <%= @answer.title %>
 </h2>
 
 <h2>
-  <b>Correct:</b>
+  <b><%= t('admin.answers.show.correct') %></b>
   <%= @answer.correct %>
 </h2>
 
-<%= link_to 'Back', admin_question_path(@answer.question) %>
+<h2><%= link_to t('admin.answers.show.footer'), admin_question_path(@answer.question) %></h2>
