@@ -65,6 +65,9 @@ ru:
       score: "Результат %{score}"
       success: "Вы выполнили тест на %{progress}%"
       failure: "Тест провален, ваш счет %{progress}%"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:

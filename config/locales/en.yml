@@ -92,6 +92,9 @@ en:
       score: "Result %{score}"
       success: "Test completed, your score %{progress}%"
       failure: "Test failed,your score %{progress}%"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist "
 
   admin:
     tests:

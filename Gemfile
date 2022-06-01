@@ -59,6 +59,10 @@ gem 'rubocop-rspec'
 
 gem 'devise', '~> 4.0'
 
+# NETWORKING
+
+gem 'faraday'
+
 # LOCALIZATION
 
 gem 'rails-i18n', '~> 7.0.0'
