@@ -15,8 +15,8 @@
     <tr>
       <th><%= upcase_title(test) %></th>
       <th><%= test.level %></th>
-      <th><%= test.category %></th>
-      <th><%= test.author %></th>
+      <th><%= test.category.title %></th>
+      <th><%= test.author.email %></th>
       <th><%= link_to t('admin.tests.body.show'), admin_test_path(test) %>|</th>
       <th><%= link_to t('admin.tests.body.edit'), edit_admin_test_path(test) %>|</th>
       <th><%= link_to t('admin.tests.body.delete'), admin_test_path(test),
