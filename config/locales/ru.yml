@@ -65,6 +65,9 @@ ru:
       score: "Результат %{score}"
       success: "Вы выполнили тест на %{progress}%"
       failure: "Тест провален, ваш счет %{progress}%"
+    gist:
+      success: "%{gist_link} успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     tests:
@@ -95,6 +98,19 @@ ru:
       edit:
         header: "Редактирование теста по %{title}"
         footer: "Назад"
+    admin_header:
+      logout: "Выйти"
+      sign_up: "Зарегистрироваться"
+      welcome: "Добро пожаловать, %{email} "
+      log_in: "Войти"
+      admin_panel: "Панель Администратора"
+      gists: "Гисты"
+    gists:
+      header: 'Список гистов'
+      question: 'Вопрос'
+      gist_link: 'Гист URL'
+      user: 'Пользователь'
+
 
     questions:
       create:
@@ -137,6 +153,7 @@ ru:
       panel: "Панель администратора TestGuru"
       welcome: "Добро пожаловать,%{first_name} %{last_name}"
       footer: "Выйти"
+      gists: "Список Гистов"
 
   tests_mailer:
     completed_test:

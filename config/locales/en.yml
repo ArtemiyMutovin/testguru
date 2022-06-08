@@ -92,6 +92,9 @@ en:
       score: "Result %{score}"
       success: "Test completed, your score %{progress}%"
       failure: "Test failed,your score %{progress}%"
+    gist:
+      success: "%{gist_link} was successfully created!"
+      failure: "An error occurred while saving gist"
 
   admin:
     tests:
@@ -122,6 +125,18 @@ en:
       edit:
         header: "Edit %{title} test"
         footer: "Back"
+    admin_header:
+      logout: "Logout"
+      sign_up: "Sign Up"
+      welcome: "Welcome, %{email} "
+      log_in: "Log In"
+      admin_panel: "Admin Panel"
+      gists: "Gists"
+    gists:
+      header: 'Gist list'
+      question: 'Question'
+      gist_link: 'Gist URL'
+      user: 'User'
 
     questions:
       create:
@@ -164,6 +179,7 @@ en:
       panel: "TestGuru admin panel"
       welcome: "Welcome,%{first_name} %{last_name}"
       footer: "Logout"
+      gists: "Gist list"
 
 
   tests_mailer:

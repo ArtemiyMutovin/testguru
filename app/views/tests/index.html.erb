@@ -13,7 +13,7 @@
     <tr>
       <th><%= upcase_title(test) %></th>
       <th><%= test.level %></th>
-      <th><%= test.category %></th>
+      <th><%= test.category.title %></th>
       <th><%= test.questions.count %></th>
       <th><%= button_to t('tests.index.body.start'), start_test_path(test) %></th>
     </tr>
