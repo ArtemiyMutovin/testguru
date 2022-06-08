@@ -1,6 +1,6 @@
 class TestPassagesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_test_passage, only: %i[show result update gist]
+  before_action :test_passage, only: %i[show result update gist]
 
   def show; end
 
@@ -25,16 +25,16 @@ class TestPassagesController < ApplicationController
 
     redirect_to @test_passage
 
-    request_check(response, gist_link)
+    request_result_message(response, gist_link)
   end
 
   private
 
-  def set_test_passage
-    @test_passage = TestPassage.find(params[:id])
+  def test_passage
+    @test_passage ||= TestPassage.find(params[:id])
   end
 
-  def request_check(response, gist_link)
+  def request_result_message(response, gist_link)
     if gist_link.present? && response.status.eql?(201)
       current_user.gists.create(question: @test_passage.current_question, gist_url: gist_link)
       flash[:notice] = t('.gist.success', gist_link: view_context.link_to('Gist', gist_link))
