@@ -1,0 +1,15 @@
+<h1><%= t('admin.gists.header')%></h1>
+<h2><table class="table table-bordered mt-3">
+  <thead>
+  <tr>
+    <th scope="col"><%= t('admin.gists.question') %></th>
+    <th scope="col"><%= t('admin.gists.gist_link') %></th>
+    <th scope="col"><%= t('admin.gists.user') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @gists %>
+  </tbody>
+</table></h2>
+
+<h2><%= link_to t('admin.tests.show.footer'), admin_tests_path %></h2>

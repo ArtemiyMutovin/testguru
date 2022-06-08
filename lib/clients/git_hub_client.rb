@@ -1,5 +1,4 @@
 class GitHubClient
-
   ROOT_ENDPOINT = 'https://api.github.com'.freeze
   ACCESS_TOKEN = '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'.freeze
 

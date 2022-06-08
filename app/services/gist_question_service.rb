@@ -1,5 +1,4 @@
 class GistQuestionService
-
   attr_accessor :client
 
   def initialize(question, client: default_client)
@@ -30,11 +29,9 @@ class GistQuestionService
     }
   end
 
-
   def gist_content
     content = [@question.title]
     content += @question.answers.pluck(:title)
     content.join('/n')
   end
-
 end
