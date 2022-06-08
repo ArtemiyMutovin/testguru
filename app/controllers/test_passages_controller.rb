@@ -26,7 +26,6 @@ class TestPassagesController < ApplicationController
     redirect_to @test_passage
 
     request_check(response, gist_link)
-
   end
 
   private
