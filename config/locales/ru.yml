@@ -36,6 +36,7 @@ ru:
     header:
       welcome: "Добро пожаловать,%{first_name} %{last_name}"
       footer: "Выйти"
+      badge: "Посмотреть заработанные бейджи"
     errors:
       header:
         few: "Обнаружено %{count} ошибки"
@@ -53,6 +54,14 @@ ru:
         questions: "Кол-во вопросов"
         actions: "Действия"
         start: "Начать"
+
+  badges:
+    index:
+      header: "Ваши бейджи"
+      name: "Название"
+      file: "Изображение"
+      badges: "Все бейджи"
+      reason: "Причина"
 
   test_passages:
     show:
@@ -104,12 +113,26 @@ ru:
       welcome: "Добро пожаловать, %{email} "
       log_in: "Войти"
       admin_panel: "Панель Администратора"
+      badge: "Редактировать Бейджи"
       gists: "Гисты"
     gists:
       header: 'Список гистов'
       question: 'Вопрос'
       gist_link: 'Гист URL'
       user: 'Пользователь'
+    badges:
+      index:
+        badges: "Все Бейджи"
+        name: "Название"
+        file: "Изображение"
+        reason: "Причина"
+        actions: "Действия"
+        add_badge: "Создать Бейдж"
+      badge:
+        edit: "Редактировать"
+        delete: "Удалить"
+      create:
+        success: "Бэйдж Создан"
 
 
     questions:
@@ -153,7 +176,8 @@ ru:
       panel: "Панель администратора TestGuru"
       welcome: "Добро пожаловать,%{first_name} %{last_name}"
       footer: "Выйти"
-      gists: "Список Гистов"
+      badge: "Бейджи"
+      gists: "Гисты"
 
   tests_mailer:
     completed_test:

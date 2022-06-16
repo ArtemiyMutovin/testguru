@@ -3,7 +3,8 @@
 
 
   <h3><%= t('admin.nav.welcome', first_name: current_user.first_name, last_name: current_user.last_name ) %></h3>
-  <%= link_to t('.gists'), admin_gists_path %>
+  <span class="badge badge-secondary"><%= link_to  t('.badge'), admin_badges_path, class: 'navbar-brand'%></span>
+  <h3><%= link_to  t('.gists'), admin_gists_path, class: 'navbar-brand'%></h3>
   <h4><%= link_to t('admin.nav.footer'), destroy_user_session_path,
                 data: {"turbo-method": :delete},
                   class: "btn btn-danger ml-3"%></h4>

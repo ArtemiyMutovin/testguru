@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :set_first_question, on: :create
+  before_validation :validation_set_successful, on: :update
 
   def completed?
     current_question.nil?
@@ -41,8 +42,16 @@ class TestPassage < ApplicationRecord
       correct_answers_count == answer_ids.count
   end
 
+  def validation_set_successful
+    self.successful = true if successful?
+  end
+
   def correct_answers
     current_question.answers.correct
+  end
+
+  def before_create_set_count
+    self.count += 1
   end
 
   def next_question

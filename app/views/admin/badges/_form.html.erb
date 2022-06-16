@@ -1,0 +1,20 @@
+<%= badge_header(@badge) %>
+<%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+  <h2><p>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :badge_name %>
+  </p></h2>
+
+  <h2><p>
+    <%= form.label :file %>
+    <%= form.text_field :file, id: :badge_file%>
+  </p></h2>
+
+  <h2><p>
+    <%= form.label :reason %>
+    <%= form.text_area :reason %>
+  </p></h2>
+
+  <%= form.submit %>
+<% end %>
