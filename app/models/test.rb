@@ -15,7 +15,4 @@ class Test < ApplicationRecord
   scope :medium, -> { where(level: 2..4).order(test_id: :desc) }
   scope :hard, -> { where(level: 5..20).order(test_id: :desc) }
   scope :list, ->(level) { where(level: level).order(test_id: :desc) }
-
-  scope :ruby, -> { where title: 'Руби' }
-  scope :game_dev, -> { where title: 'C#' }
 end

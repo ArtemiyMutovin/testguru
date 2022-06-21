@@ -1,4 +1,10 @@
 ru:
+
+  rules:
+    category: 'Категория'
+    first_try: 'C первой попытки'
+    level: 'Уровень'
+
   hello: "Привет мир"
 
   helpers:
@@ -69,7 +75,7 @@ ru:
       body:
         count: "Кол-во вопросов:"
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
       footer: "Назад к тестам"
       score: "Результат %{score}"
       success: "Вы выполнили тест на %{progress}%"

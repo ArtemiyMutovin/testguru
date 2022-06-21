@@ -6,7 +6,7 @@
 </p></h2>
 
 <h2>
-  <%= @test_passage.current_question_id %>)<%= @test_passage.current_question.title %>
+  <%= @test_passage.current_question.title %>
 </h2>
 
 <%= form_with url: test_passage_path(@test_passage),data: {turbo: false}, local: true, method: :put do |form|%>

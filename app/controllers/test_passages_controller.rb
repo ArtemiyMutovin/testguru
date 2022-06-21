@@ -8,12 +8,12 @@ class TestPassagesController < ApplicationController
 
   def update
     @test_passage.accept!(params[:answer_ids])
-
     if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
-      @badges = BadgeIssuance.new(@test_passage).give_badges
-      @test_passage.user.badges.push(@badges) if @badges.present?
-      redirect_to result_test_passage_path(@test_passage)
+      if @test_passage.successful?
+        test_passage_successful
+      else
+        redirect_to result_test_passage_path(@test_passage)
+      end
     else
       render :show
     end
@@ -43,5 +43,12 @@ class TestPassagesController < ApplicationController
     else
       flash[:alert] = t('.gist.failure')
     end
+  end
+
+  def test_passage_successful
+    TestsMailer.completed_test(@test_passage).deliver_now
+    @badges = BadgeIssuance.new(@test_passage).give_badges
+    @test_passage.user.badges.push(@badges) if @badges.present?
+    redirect_to result_test_passage_path(@test_passage)
   end
 end

@@ -1,5 +1,4 @@
 <h1><%= t('.header')%></h1>
-<%= render 'shared/errors', resource: @badge %>
 <table class="table table-bordered mt-3">
   <thead>
   <tr>
@@ -25,3 +24,5 @@
   <%= render @badges %>
   </tbody>
 </table>
+
+<h2><%= link_to t('admin.tests.new.footer'), tests_path %></h2>

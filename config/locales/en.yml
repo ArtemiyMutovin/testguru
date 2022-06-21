@@ -30,6 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+
+  rules:
+    category: 'Category'
+    first_try: 'First_try'
+    level: 'Level'
+
   hello: "Hello world"
 
   helpers:
@@ -97,7 +103,7 @@ en:
       body:
         count: "Questions count:"
     result:
-      header: "Test %{title} successfully completed!"
+      header: "Test %{title} completed!"
       footer: "Back to tests"
       score: "Result %{score}"
       success: "Test completed, your score %{progress}%"
