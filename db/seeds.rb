@@ -23,7 +23,7 @@ tests = Test.create([{title: 'Ruby', level: 3, category: categories[1], author: 
 questions = Question.create([{ title: 'Кто создал Ruby?', test: tests[0] }, { title: 'Первое появление Ruby?', test: tests[0] },
                  {title: 'Как называется массив?', test: tests[0] }, { title: 'К какому классу относится число 8?', test: tests[0] },
                  { title: 'Кто создал C#?', test: tests[1] }, { title: 'Год создания C#', test: tests[1] },
-                  {title: 'В каком игровом движке используется C#', test: tests[1] }, { title: 'Как называется структура?', test: tests[1] }])
+                  {title: 'На каком движке была создана игра Metal Gear Solid?', test: tests[1] }, { title: 'Как называется структура?', test: tests[1] }])
 Answer.create([{ title: 'Yukihiro "Matz" Matsumoto', correct: true, question: questions[0] },
                { title: 'Guido van Rossum', correct: false, question: questions[0] },
                { title: 'Brendan Eich', correct: false, question: questions[0] },
@@ -42,9 +42,9 @@ Answer.create([{ title: 'Yukihiro "Matz" Matsumoto', correct: true, question: qu
                { title: '1997', correct: false, question: questions[5] },
                { title: '1994', correct: false, question: questions[5] },
                { title: '2001', correct: true, question: questions[5] },
-               { title: 'RE Engine', correct: true, question: questions[6] },
+               { title: 'Fox Engine', correct: true, question: questions[6] },
                { title: 'Unreal Engine', correct: false, question: questions[6] },
-               { title: 'Fox Engine', correct: false, question: questions[6] },
+               { title: 'RE Engine', correct: false, question: questions[6] },
                { title: 'Class', correct: false, question: questions[7] },
                { title: 'Struct', correct: true, question: questions[7] },
                { title: 'Model', correct: false, question: questions[7] }])
