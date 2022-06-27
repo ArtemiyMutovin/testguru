@@ -30,6 +30,12 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+
+  rules:
+    category: 'Category'
+    first_try: 'First_try'
+    level: 'Level'
+
   hello: "Hello world"
 
   helpers:
@@ -67,6 +73,7 @@ en:
     header:
       welcome: "Welcome,%{first_name} %{last_name}"
       footer: "Logout"
+      badge: "Show My Badges"
     errors:
       header:
         one: "%{count} error detected"
@@ -81,13 +88,22 @@ en:
       category: "Category"
       author: "Author"
 
+  badges:
+    index:
+      header: "Your Badges"
+      name: "Name"
+      file: "Image"
+      badges: "All Badges"
+      reason: "Reason"
+
+
   test_passages:
     show:
       header: "Passing the %{title} test"
       body:
         count: "Questions count:"
     result:
-      header: "Test %{title} successfully completed!"
+      header: "Test %{title} completed!"
       footer: "Back to tests"
       score: "Result %{score}"
       success: "Test completed, your score %{progress}%"
@@ -131,12 +147,27 @@ en:
       welcome: "Welcome, %{email} "
       log_in: "Log In"
       admin_panel: "Admin Panel"
+      badge: "Edit Badge"
       gists: "Gists"
     gists:
       header: 'Gist list'
       question: 'Question'
       gist_link: 'Gist URL'
       user: 'User'
+    badges:
+      index:
+        badges: "All Badges"
+        name: "Name"
+        file: "File"
+        reason: "Reason"
+        actions: "Actions"
+        add_badge: "Add Badge"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+        show: "Show"
+      create:
+        success: "Badge Create Successful"
 
     questions:
       create:
@@ -179,7 +210,8 @@ en:
       panel: "TestGuru admin panel"
       welcome: "Welcome,%{first_name} %{last_name}"
       footer: "Logout"
-      gists: "Gist list"
+      badge: "Badge"
+      gists: "Gists"
 
 
   tests_mailer:

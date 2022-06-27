@@ -4,5 +4,6 @@
       <h4><%= link_to t('shared.header.footer'), destroy_user_session_path,
                       data: {"turbo-method": :delete},
                       class: "btn btn-danger ml-3"%></h4>
+    <%= link_to t('.badge'), badges_path, class: 'navbar-brand' %>
     <% end %>
 </header>

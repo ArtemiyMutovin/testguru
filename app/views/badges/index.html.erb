@@ -1,0 +1,28 @@
+<h1><%= t('.header')%></h1>
+<table class="table table-bordered mt-3">
+  <thead>
+  <tr>
+    <th scope="col"><%= t('.name') %></th>
+    <th scope="col"><%= t('.file') %></th>
+    <th scope="col"><%= t('.reason') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @user_badges %>
+  </tbody>
+</table>
+<h1><%= t('.badges')%></h1>
+<table class="table table-bordered mt-3">
+  <thead>
+  <tr>
+    <th scope="col"><%= t('.name') %></th>
+    <th scope="col"><%= t('.file') %></th>
+    <th scope="col"><%= t('.reason') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @badges %>
+  </tbody>
+</table>
+
+<h2><%= link_to t('admin.tests.new.footer'), tests_path %></h2>
