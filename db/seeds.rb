@@ -64,4 +64,4 @@ Badge.create([{ name: 'game',
               { name: 'level',
                 file: 'https://strausz.web.elte.hu/140404/Insidious_Smile.jpg',
                 reason: 'Выдается после прохождения всех тестов определенного уровня',
-                rule_type: :level, rule_value: 4 }])
+                rule_type: :level, rule_value: 5 }])
