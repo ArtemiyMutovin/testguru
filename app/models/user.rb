@@ -14,7 +14,7 @@ class User < ApplicationRecord
   has_many :user_badges, dependent: :destroy
   has_many :badges, through: :user_badges
 
-  validates :email, uniqueness: true
+  validates :email, uniqueness: { case_sensitive: false }
 
   def show_tests(level)
     tests.where(level: level)
