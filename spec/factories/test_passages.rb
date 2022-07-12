@@ -6,7 +6,7 @@ FactoryBot.define do
     user_id { create(:user).id }
 
 
-    trait :test_passage2 do
+    trait :failed do
       correct_questions { 0 }
     end
   end

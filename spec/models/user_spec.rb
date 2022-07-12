@@ -44,10 +44,10 @@ RSpec.describe User, type: :model do
 
   describe 'admin?' do
     let(:user) { create(:user) }
-    let(:second_user) { create(:user, :second_user) }
+    let(:admin) { create(:user, :admin) }
 
     it 'user is admin' do
-      expect(second_user.admin?).to eq true
+      expect(admin.admin?).to eq true
     end
 
     it 'user is not admin' do

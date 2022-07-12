@@ -28,10 +28,10 @@ RSpec.describe TestPassage, type: :model do
   describe 'failed?' do
     let(:test) { create(:test) }
     let(:user) { create(:user) }
-    let!(:test_passage2) { create(:test_passage, :test_passage2, user: user, test: test) }
+    let!(:failed) { create(:test_passage, :failed, user: user, test: test) }
 
     it 'user test passage failed?' do
-      expect(test_passage2.failed?).to eq true
+      expect(failed.failed?).to eq true
     end
   end
 
