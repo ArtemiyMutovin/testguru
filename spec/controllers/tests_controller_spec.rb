@@ -10,7 +10,6 @@ RSpec.describe TestsController, type: :controller do
       get :index
     end
 
-
     it 'populates an array of all tests' do
       expect(assigns(:tests)).to match_array(tests)
     end
