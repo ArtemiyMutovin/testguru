@@ -12,5 +12,9 @@ FactoryBot.define do
     trait :test_with_second_level do
       level { 2 }
     end
+
+    trait :invalid do
+      title { nil }
+    end
   end
 end

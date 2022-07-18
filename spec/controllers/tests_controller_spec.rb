@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe TestsController, type: :controller do
+  let(:user) { create(:user) }
+
   describe 'GET #index' do
-    let(:user) { create(:user) }
     let(:tests) { create_list(:test, 3, users: [user]) }
 
     before do
