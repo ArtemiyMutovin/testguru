@@ -122,7 +122,7 @@ RSpec.describe Admin::TestsController, type: :controller do
     end
 
     context 'with invalid attributes' do
-      it 'does not change question' do
+      it 'does not change test' do
         title = test.title
         patch :update, params: { id: test, test: attributes_for(:test, :invalid) }
         test.reload
