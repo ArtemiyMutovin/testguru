@@ -57,7 +57,7 @@ RSpec.describe Admin::TestsController, type: :controller do
       get :edit, params: { id: test }
     end
 
-    it 'assigns the requested question to @test' do
+    it 'assigns the requested test to @test' do
       expect(assigns(:test)).to eq test
     end
 
@@ -92,6 +92,48 @@ RSpec.describe Admin::TestsController, type: :controller do
       it 're-renders new view' do
         post :create, params: { test: attributes_for(:test, :invalid) }
         expect(response).to render_template :new
+      end
+    end
+  end
+
+  describe 'PATCH #update' do
+    before do
+      login(admin)
+    end
+
+    context 'with valid attributes' do
+      it 'assigns the requested test to @test' do
+        patch :update, params: { id: test, test: attributes_for(:test) }
+        expect(assigns(:test)).to eq test
+      end
+
+      it 'changes test attributes' do
+        patch :update, params: { id: test, test: { title: 'new title', level: 1 } }
+        test.reload
+
+        expect(test.title).to eq 'new title'
+        expect(test.level).to eq 1
+      end
+
+      it 'redirects to updated test' do
+        patch :update, params: { id: test, test: attributes_for(:test) }
+        expect(response).to redirect_to admin_test_path(assigns(:test))
+      end
+    end
+
+    context 'with invalid attributes' do
+      it 'does not change question' do
+        title = test.title
+        patch :update, params: { id: test, test: attributes_for(:test, :invalid) }
+        test.reload
+
+        expect(test.title).to eq title
+        expect(test.level).to eq 4
+      end
+
+      it 're-renders edit view' do
+        patch :update, params: { id: test, test: attributes_for(:test, :invalid) }
+        expect(response).to render_template :edit
       end
     end
   end
