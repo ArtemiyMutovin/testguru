@@ -135,4 +135,22 @@ RSpec.describe Admin::QuestionsController, type: :controller do
       end
     end
   end
+
+  describe 'DELETE #destroy' do
+    let!(:question) { create(:question, test: test) }
+
+    before do
+      login(admin)
+    end
+
+    it 'deletes the question' do
+      expect { delete :destroy, params: { id: question } }
+        .to change(Question, :count).by(-1)
+    end
+
+    it 'redirects to index' do
+      delete :destroy, params: { id: question }
+      expect(response).to redirect_to admin_questions_path
+    end
+  end
 end

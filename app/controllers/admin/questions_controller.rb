@@ -1,7 +1,7 @@
 class Admin::QuestionsController < Admin::BaseController
   before_action :authenticate_user!
   before_action :test, only: %i[index new create]
-  before_action :question, only: %i[show edit update]
+  before_action :question, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -33,6 +33,11 @@ class Admin::QuestionsController < Admin::BaseController
     else
       render :new
     end
+  end
+
+  def destroy
+    @question.destroy
+    redirect_to admin_questions_path
   end
 
   private
