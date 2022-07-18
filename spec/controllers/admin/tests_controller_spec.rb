@@ -27,7 +27,7 @@ RSpec.describe Admin::TestsController, type: :controller do
       get :show, params: { id: test }
     end
 
-    it 'assigns the requested question to @test' do
+    it 'assigns the requested test to @test' do
       expect(assigns(:test)).to eq test
     end
 
@@ -42,7 +42,7 @@ RSpec.describe Admin::TestsController, type: :controller do
       get :new, params: { test_id: test }
     end
 
-    it 'assigns the requested question to @test' do
+    it 'assigns the requested test to @test' do
       expect(assigns(:test)).to be_a_new(Test)
     end
 
