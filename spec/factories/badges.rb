@@ -1,8 +1,13 @@
 FactoryBot.define do
   factory :badge do
-    name { 'Great' }
-    file { 'File' }
+    name { 'name' }
+    file { 'file' }
     rule_type { 'category' }
-    rule_value { 'Perfect' }
+    rule_value { 'value' }
+
+    trait :invalid do
+      name { nil }
+      file { nil }
+    end
   end
 end

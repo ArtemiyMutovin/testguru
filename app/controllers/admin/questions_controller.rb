@@ -1,7 +1,7 @@
 class Admin::QuestionsController < Admin::BaseController
   before_action :authenticate_user!
-  before_action :find_test, only: %i[index new create]
-  before_action :find_question, only: %i[show edit update]
+  before_action :test, only: %i[index new create]
+  before_action :question, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -35,17 +35,22 @@ class Admin::QuestionsController < Admin::BaseController
     end
   end
 
+  def destroy
+    @question.destroy
+    redirect_to admin_questions_path
+  end
+
   private
 
   def question_params
-    params.require(:question).permit(:title, :test_id)
+    params.require(:question).permit(:title)
   end
 
-  def find_test
+  def test
     @test = Test.find(params[:test_id])
   end
 
-  def find_question
+  def question
     @question = Question.find(params[:id])
   end
 
