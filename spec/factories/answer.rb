@@ -5,6 +5,7 @@ FactoryBot.define do
     correct { false }
 
     trait :correct_answer do
+      title { 'Answer2' }
       correct { true }
     end
 
