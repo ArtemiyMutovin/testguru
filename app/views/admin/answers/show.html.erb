@@ -10,6 +10,10 @@
 </h2>
 
 <h2>
+  <%= render 'shared/files', resource: @answer %>
+</h2>
+
+<h2>
   <b><%= t('admin.answers.show.correct') %></b>
   <%= @answer.correct %>
 </h2>

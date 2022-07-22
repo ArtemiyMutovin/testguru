@@ -8,11 +8,8 @@
   <%= @question.test.title %>
 </p></h1>
 
-<h2><% if @question.files.attached? %>
-    <% @question.files.each do |file| %>
-    <p><%= link_to file.filename.to_s, url_for(file) %></p>
-      <% end %>
-    <% end %>
+<h2>
+  <%= render 'shared/files', resource: @question %>
 </h2>
 
 <h2><%= t('admin.questions.show.answers') %></h2>

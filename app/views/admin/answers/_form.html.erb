@@ -7,6 +7,11 @@
   </p></h2><br>
 
   <h2><p>
+    <%= form.label :file %><br>
+    <%= form.file_field :files, multiple: true %>
+  </p></h2><br>
+
+  <h2><p>
     <%= form.label :correct %><br>
     <%= form.check_box :correct, id: :answer_correct %>
   </p></h2><br>
