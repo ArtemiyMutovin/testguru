@@ -8,6 +8,13 @@
   <%= @question.test.title %>
 </p></h1>
 
+<h2><% if @question.files.attached? %>
+    <% @question.files.each do |file| %>
+    <p><%= link_to file.filename.to_s, url_for(file) %></p>
+      <% end %>
+    <% end %>
+</h2>
+
 <h2><%= t('admin.questions.show.answers') %></h2>
 <h2><%= link_to t('admin.questions.show.link'), new_admin_question_answer_path(@question)%></h2>
 
