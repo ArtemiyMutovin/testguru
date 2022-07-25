@@ -2,7 +2,7 @@
     <% resource.files.each do |file| %>
       <p><%= link_to file.filename.to_s, url_for(file) %></p>
       <p><%= link_to 'Delete file', admin_file_path(file),
-                     data: {"turbo-method": :delete}, remote: true if current_user&.admin? %></p>
+                     data: {"turbo-method": :delete} %></p>
     <% end %>
   <% end %>
 </h2>
