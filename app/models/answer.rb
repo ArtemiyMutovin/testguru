@@ -3,6 +3,8 @@
 class Answer < ApplicationRecord
   belongs_to :question
 
+  has_many_attached :files
+
   scope :correct, -> { where(correct: true) }
 
   validates :title, presence: true

@@ -37,6 +37,10 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :files, only: :destroy
+  end
+
+  namespace :admin do
     resources :gists, only: :index
   end
 

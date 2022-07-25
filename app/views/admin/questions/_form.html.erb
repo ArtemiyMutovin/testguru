@@ -6,5 +6,10 @@
   <%= form.text_field :title %>
 </p></h2><br>
 
+  <h2><p>
+    <%= form.label :file %><br>
+    <%= form.file_field :files, multiple: true %>
+  </p></h2><br>
+
 <h3><p><%= form.submit %></p></h3>
 <% end %>

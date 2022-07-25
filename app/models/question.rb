@@ -8,6 +8,8 @@ class Question < ApplicationRecord
            foreign_key: :current_question_id,
            inverse_of: :current_question,
            dependent: :destroy
+
+  has_many_attached :files
   has_many :gists, dependent: :destroy
 
   validates :title, presence: true

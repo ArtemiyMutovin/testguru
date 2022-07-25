@@ -43,7 +43,7 @@ class Admin::QuestionsController < Admin::BaseController
   private
 
   def question_params
-    params.require(:question).permit(:title)
+    params.require(:question).permit(:title, files: [])
   end
 
   def test
@@ -51,7 +51,7 @@ class Admin::QuestionsController < Admin::BaseController
   end
 
   def question
-    @question = Question.find(params[:id])
+    @question ||= params[:id] ? Question.with_attached_files.find(params[:id]) : Question.new
   end
 
   def rescue_with_question_not_found

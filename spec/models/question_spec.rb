@@ -6,5 +6,9 @@ RSpec.describe Question, type: :model do
   it { is_expected.to have_many(:current_questions).class_name('TestPassage').with_foreign_key(:current_question_id) }
   it { is_expected.to have_many(:gists).dependent(:destroy) }
 
+  it 'have many attached files' do
+    expect(described_class.new.files).to be_an_instance_of(ActiveStorage::Attached::Many)
+  end
+
   it { is_expected.to validate_presence_of :title }
 end
