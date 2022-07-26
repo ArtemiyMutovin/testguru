@@ -7,6 +7,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def new
     @answer = @question.answers.new
+    @answer.links.new
   end
 
   def edit; end
@@ -46,6 +47,6 @@ class Admin::AnswersController < Admin::BaseController
   end
 
   def answer_params
-    params.require(:answer).permit(:title, :correct, files: [])
+    params.require(:answer).permit(:title, :correct, files: [], links_attributes: %i[name url])
   end
 end

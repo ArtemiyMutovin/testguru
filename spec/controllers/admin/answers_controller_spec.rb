@@ -31,6 +31,10 @@ RSpec.describe Admin::AnswersController, type: :controller do
       expect(assigns(:answer)).to be_a_new(Answer)
     end
 
+    it 'assigns the requested Answer link to @answer.links' do
+      expect(assigns(:answer).links.first).to be_a_new(Link)
+    end
+
     it 'renders new view' do
       expect(response).to render_template :new
     end

@@ -64,8 +64,11 @@ gem 'devise', '~> 4.0'
 # NETWORKING
 
 # gem 'faraday'
+gem "cocoon"
 
 gem 'octokit', '~> 4.0'
+
+gem "validate_url"
 
 # LOCALIZATION
 

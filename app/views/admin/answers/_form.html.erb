@@ -11,6 +11,18 @@
     <%= form.file_field :files, multiple: true %>
   </p></h2><br>
 
+  <%= form.fields_for :links do |link| %>
+    <h2><p>
+      <%= link.label :name, 'Link name' %><br>
+      <%= link.text_field :name %>
+    </p></h2><br>
+
+    <h2><p>
+      <%= link.label :url %><br>
+      <%= link.text_field :url %>
+    </p></h2><br>
+  <% end %>
+
   <h2><p>
     <%= form.label :correct %><br>
     <%= form.check_box :correct, id: :answer_correct %>

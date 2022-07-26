@@ -13,6 +13,7 @@ class Admin::QuestionsController < Admin::BaseController
 
   def new
     @question = @test.questions.new
+    @question.links.new
   end
 
   def edit; end
@@ -43,7 +44,7 @@ class Admin::QuestionsController < Admin::BaseController
   private
 
   def question_params
-    params.require(:question).permit(:title, files: [])
+    params.require(:question).permit(:title, files: [], links_attributes: %i[name url])
   end
 
   def test
