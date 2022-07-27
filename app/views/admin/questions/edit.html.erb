@@ -1,5 +1,6 @@
 <h1><%= t('admin.questions.edit.header', title: question_header(@question.test)) %></h1>
 
-<%= render 'admin/questions/form'%>
+<%= render 'form'%>
+
 
 <h2><%= link_to t('admin.questions.edit.footer'), admin_test_questions_path(@question.test) %></h2>

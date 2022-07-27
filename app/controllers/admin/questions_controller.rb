@@ -16,7 +16,9 @@ class Admin::QuestionsController < Admin::BaseController
     @question.links.new
   end
 
-  def edit; end
+  def edit
+    @question.links.new
+  end
 
   def update
     if @question.update(question_params)
