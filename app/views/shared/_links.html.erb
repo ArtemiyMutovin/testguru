@@ -1,8 +1,12 @@
 <h2><% resource.links.each do |link| %>
     <%  if link.gist? %>
       <li><%= link.gist %></li>
+      <p><%= link_to 'Delete link', admin_link_path(link),
+                     data: {"turbo-method": :delete} %></p>
     <% else %>
       <li><%= link_to link.name, link.url %></li>
+      <p><%= link_to 'Delete link', admin_link_path(link),
+                     data: {"turbo-method": :delete} %></p>
     <% end %>
  <% end %>
 </h2>
