@@ -1,21 +1,21 @@
 
-<%= form_with model: [:admin, @test], data: {turbo: false}, local: true do |form| %>
+<%= form_with model: [:admin, @test], data: {turbo: false}, local: true do |f| %>
   <%= render 'shared/errors', resource: @test  %>
 
   <h2><p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
   </p></h2><br>
 
   <h2><p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level %>
+    <%= f.label :level %><br>
+    <%= f.number_field :level %>
   </p></h2><br>
 
   <h2><p>
-    <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+    <%= f.label :category_id %><br>
+    <%= f.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p></h2><br>
 
-  <h3><p><%= form.submit %></p></h3>
+  <h3><p><%= f.submit %></p></h3>
 <% end %>
