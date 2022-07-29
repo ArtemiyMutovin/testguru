@@ -1,20 +1,33 @@
-<%= form_with model: [:admin, @question, @answer], data: {turbo: false}, local: true do |form| %>
+<%= form_with model: [:admin, @question, @answer], data: {turbo: false}, local: true do |f| %>
   <%= render 'shared/errors', resource: @answer %>
 
   <h2><p>
-    <%= form.label :title %><br>
-    <%= form.text_area :title, id: :answer_title, rows: 6, cols: 50 %>
+    <%= f.label :title %><br>
+    <%= f.text_area :title, id: :answer_title, rows: 6, cols: 50 %>
   </p></h2><br>
 
   <h2><p>
-    <%= form.label :file %><br>
-    <%= form.file_field :files, multiple: true %>
+    <%= f.label :file %><br>
+    <%= f.file_field :files, multiple: true %>
   </p></h2><br>
+
+  <%= f.fields_for :links do |l| %>
+
+    <h2><p>
+      <%= l.label :name, 'Link name' %><br>
+      <%= l.text_field :name %>
+    </p></h2><br>
+
+    <h2><p>
+      <%= l.label :url %><br>
+      <%= l.text_field :url %>
+    </p></h2><br>
+  <% end %>
 
   <h2><p>
-    <%= form.label :correct %><br>
-    <%= form.check_box :correct, id: :answer_correct %>
+    <%= f.label :correct %><br>
+    <%= f.check_box :correct, id: :answer_correct %>
   </p></h2><br>
 
-  <h3><p><%= form.submit %></p></h3>
+  <h3><p><%= f.submit %></p></h3>
 <% end %>

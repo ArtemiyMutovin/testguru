@@ -41,6 +41,10 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :links, only: :destroy
+  end
+
+  namespace :admin do
     resources :gists, only: :index
   end
 
