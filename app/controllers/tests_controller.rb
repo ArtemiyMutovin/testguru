@@ -2,6 +2,8 @@ class TestsController < ApplicationController
   before_action :authenticate_user!
   before_action :test, only: %i[start]
 
+  authorize_resource
+
   def index
     @tests = Test.all
   end

@@ -4,7 +4,6 @@ FactoryBot.define do
     test_id { create(:test).id }
     user_id { create(:user).id }
 
-
     trait :failed do
       correct_questions { 0 }
     end

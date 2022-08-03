@@ -1,6 +1,8 @@
 class Admin::BadgesController < Admin::BaseController
   before_action :badge, only: %i[destroy update edit]
 
+  authorize_resource
+
   def index
     @badges = Badge.all
   end

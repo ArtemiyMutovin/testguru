@@ -2,6 +2,8 @@ class Admin::FilesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_file
 
+  authorize_resource
+
   def destroy
     @file.purge
   end

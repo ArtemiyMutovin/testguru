@@ -3,6 +3,8 @@ class Admin::AnswersController < Admin::BaseController
   before_action :find_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
 
+  authorize_resource
+
   def show; end
 
   def new
@@ -16,7 +18,6 @@ class Admin::AnswersController < Admin::BaseController
 
   def create
     @answer = @question.answers.new(answer_params)
-
 
     if @answer.save
       redirect_to admin_answer_path(@answer)

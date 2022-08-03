@@ -2,6 +2,8 @@ class TestPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :test_passage, only: %i[show result update gist]
 
+  authorize_resource
+
   def show; end
 
   def result; end

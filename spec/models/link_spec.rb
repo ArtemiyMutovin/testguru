@@ -12,7 +12,6 @@ RSpec.describe Link, type: :model do
   it { is_expected.to validate_presence_of :url }
   it { is_expected.to validate_url_of(:url) }
 
-
   context 'when is gist?' do
     it 'true' do
       expect(gist_link).to be_gist

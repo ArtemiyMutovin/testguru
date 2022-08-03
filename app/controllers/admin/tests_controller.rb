@@ -1,7 +1,9 @@
 class Admin::TestsController < Admin::BaseController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, unless: :devise_controller?
   before_action :find_test, only: %i[show edit update destroy]
-  before_action :set_test, only: %i[show edit update destroy start]
+  before_action :set_test, only: %i[show edit update destroy]
+
+  authorize_resource
 
   def index
     @tests = Test.all
