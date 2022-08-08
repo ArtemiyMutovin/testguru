@@ -63,6 +63,8 @@ gem 'devise', '~> 4.0'
 
 gem 'cancancan'
 
+gem 'doorkeeper'
+
 # NETWORKING
 
 # gem 'faraday'
