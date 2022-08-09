@@ -69,6 +69,8 @@ gem 'doorkeeper'
 
 # gem 'faraday'
 
+gem 'faraday-retry'
+
 gem 'cocoon'
 
 gem 'octokit', '~> 4.0'
