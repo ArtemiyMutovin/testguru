@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_08_105829) do
+ActiveRecord::Schema[7.0].define(version: 2022_08_11_084416) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -132,6 +132,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_105829) do
     t.integer "test_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "author_id"
+    t.index ["author_id"], name: "index_questions_on_author_id"
     t.index ["test_id"], name: "index_questions_on_test_id"
   end
 
@@ -202,6 +204,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_08_105829) do
   add_foreign_key "oauth_access_grants", "oauth_applications", column: "application_id"
   add_foreign_key "oauth_access_tokens", "oauth_applications", column: "application_id"
   add_foreign_key "questions", "tests"
+  add_foreign_key "questions", "users", column: "author_id"
   add_foreign_key "test_passages", "questions", column: "current_question_id"
   add_foreign_key "test_passages", "tests"
   add_foreign_key "test_passages", "users"

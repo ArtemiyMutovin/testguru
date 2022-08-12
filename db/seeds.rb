@@ -20,10 +20,14 @@ User.create([{ first_name: 'David', last_name: 'Brown', type: 'Admin',
 categories = Category.create([{ title: 'Game Development' }, { title: 'Web Development' }])
 tests = Test.create([{title: 'Ruby', level: 3, category: categories[1], author: Admin.last},
              {title: 'C#', level: 5, category: categories[0], author: Admin.last}])
-questions = Question.create([{ title: 'Кто создал Ruby?', test: tests[0] }, { title: 'Первое появление Ruby?', test: tests[0] },
-                 {title: 'Как называется массив?', test: tests[0] }, { title: 'К какому классу относится число 8?', test: tests[0] },
-                 { title: 'Кто создал C#?', test: tests[1] }, { title: 'Год создания C#', test: tests[1] },
-                  {title: 'На каком движке была создана игра Metal Gear Solid?', test: tests[1] }, { title: 'Как называется структура?', test: tests[1] }])
+questions = Question.create([{ title: 'Кто создал Ruby?', test: tests[0], author: Admin.last },
+                             { title: 'Первое появление Ruby?', test: tests[0], author: Admin.last},
+                             {title: 'Как называется массив?', test: tests[0], author: Admin.last},
+                             { title: 'К какому классу относится число 8?', test: tests[0], author: Admin.last },
+                             { title: 'Кто создал C#?', test: tests[1], author: Admin.last },
+                             { title: 'Год создания C#', test: tests[1], author: Admin.last },
+                  {title: 'На каком движке была создана игра Metal Gear Solid?', test: tests[1], author: Admin.last },
+                             { title: 'Как называется структура?', test: tests[1], author: Admin.last }])
 Answer.create([{ title: 'Yukihiro "Matz" Matsumoto', correct: true, question: questions[0] },
                { title: 'Guido van Rossum', correct: false, question: questions[0] },
                { title: 'Brendan Eich', correct: false, question: questions[0] },

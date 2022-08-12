@@ -12,4 +12,12 @@ class Answer < ApplicationRecord
 
   validates :title, presence: true
   validates :title, uniqueness: true
+
+  after_create :send_notification
+
+  private
+
+  def send_notification
+    NewAnswersNotificationJob.perform_later(question.author, self)
+  end
 end

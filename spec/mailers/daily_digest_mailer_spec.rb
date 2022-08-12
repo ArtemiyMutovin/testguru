@@ -3,7 +3,7 @@ RSpec.describe DailyDigestMailer, type: :mailer do
   describe 'digest' do
     let(:admin) { create(:admin) }
     let(:mail) { described_class.digest(admin) }
-    let!(:questions) { create_list(:question, 2, created_at: Time.zone.now) }
+    let!(:questions) { create_list(:question, 2, created_at: Time.zone.now, author: admin) }
 
     it 'renders the headers' do
       expect(mail.subject).to eq('Digest')

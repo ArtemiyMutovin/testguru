@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Admin::AnswersController, type: :controller do
   let(:admin) { create(:admin) }
   let(:test) { create(:test, users: [admin]) }
-  let(:question) { create(:question, test: test) }
+  let(:question) { create(:question, test: test, author: admin) }
   let(:answer) { create(:answer, question: question) }
 
   describe 'GET #show' do

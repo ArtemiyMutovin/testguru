@@ -4,7 +4,7 @@ RSpec.describe Admin::FilesController, type: :controller do
   describe 'DELETE #destroy' do
     let(:admin) { create(:admin) }
     let(:test) { create(:test, users: [admin]) }
-    let(:question) { create(:question, :with_files, test: test) }
+    let(:question) { create(:question, :with_files, test: test, author: admin) }
 
     before do
       login(admin)
