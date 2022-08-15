@@ -46,8 +46,6 @@ gem 'devise', '~> 4.0'
 
 gem 'cancancan'
 
-gem 'doorkeeper'
-
 gem 'sidekiq'
 
 gem 'sinatra', require: false

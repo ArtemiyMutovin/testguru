@@ -5,7 +5,6 @@
      mount Sidekiq::Web => '/sidekiq'
    end
 
-   use_doorkeeper
    devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout, sign_up: :signup }
 
    root to: 'tests#index'
