@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe Admin::QuestionsController, type: :controller do
   let(:admin) { create(:admin) }
   let(:test) { create(:test, users: [admin]) }
-  let(:question) { create(:question, test: test) }
+  let(:question) { create(:question, test: test, author: admin) }
 
   describe 'GET #index' do
-    let(:questions) { create_list(:question, 3, test: test) }
+    let(:questions) { create_list(:question, 3, test: test, author: admin) }
 
     before do
       login(admin)
@@ -145,7 +145,7 @@ RSpec.describe Admin::QuestionsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
-    let!(:question) { create(:question, test: test) }
+    let!(:question) { create(:question, test: test, author: admin) }
 
     before do
       login(admin)

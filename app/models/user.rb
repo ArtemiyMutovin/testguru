@@ -13,6 +13,7 @@ class User < ApplicationRecord
   has_many :gists, dependent: :destroy
   has_many :user_badges, dependent: :destroy
   has_many :badges, through: :user_badges
+  has_many :subscriptions, dependent: :destroy
 
   validates :email, uniqueness: { case_sensitive: false }
 

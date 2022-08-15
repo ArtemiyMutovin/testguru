@@ -1,0 +1,10 @@
+<h2>
+  <% if current_user %>
+    <% if @question.subscribed?(current_user) %>
+      <p><%= link_to 'Disable notifications', admin_subscription_path(@question.subscription(current_user)), remote: true,
+                       data: {"turbo-method": :delete} %></p>
+    <% else %>
+      <p><%= button_to "Subscribe on question updates", admin_question_subscriptions_path(@question), remote: true %></p>
+    <% end %>
+  <% end %>
+</h2>

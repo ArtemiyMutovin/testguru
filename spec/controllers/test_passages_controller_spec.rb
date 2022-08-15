@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe TestPassagesController, type: :controller do
+  let(:admin) { create(:admin) }
   let(:user) { create(:user) }
-  let(:test) { create(:test, users: [user]) }
-  let(:question) { create(:question, test: test) }
+  let(:test) { create(:test, users: [admin]) }
+  let(:question) { create(:question, test: test, author: admin) }
   let(:answer) { create(:answer, question: question) }
   let(:test_passage) { create(:test_passage, user: user, test: test, current_question_id: question) }
 
