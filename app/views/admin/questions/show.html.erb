@@ -16,6 +16,10 @@
   <%= render 'shared/links', resource: @question %>
 </h2>
 
+<h2>
+  <%= render 'shared/subscriptions', resource: @question %>
+</h2>
+
 <h2><%= t('admin.questions.show.answers') %></h2>
 <h2><%= link_to t('admin.questions.show.link'), new_admin_question_answer_path(@question)%></h2>
 
